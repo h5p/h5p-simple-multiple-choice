@@ -1,0 +1,9 @@
+{
+  "question": "What do you like the most ?",
+  "inputType": "radio",
+  "alternatives": [
+    "Fish",
+    "Turtles",
+    "Icecream"
+  ]
+}

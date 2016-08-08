@@ -1,0 +1,34 @@
+[
+  {
+    "name": "question",
+    "label": "Question",
+    "type": "text"
+  },
+  {
+    "name": "inputType",
+    "label": "Multiple choice type",
+    "type": "select",
+    "options": [
+      {
+        "label": "Checkbox",
+        "value": "checkbox"
+      },
+      {
+        "label": "Radiobox",
+        "value": "radio"
+      }
+    ]
+  },
+  {
+    "name": "alternatives",
+    "label": "Answer alternatives",
+    "type": "list",
+    "entity": "Alternative",
+    "min": 2,
+    "field": {
+      "name": "alternative",
+      "label": "Alternative",
+      "type": "text"
+    }
+  }
+]

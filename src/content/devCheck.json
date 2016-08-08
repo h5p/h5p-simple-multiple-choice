@@ -1,0 +1,9 @@
+{
+  "question": "What do you like the most ?",
+  "inputType": "checkbox",
+  "alternatives": [
+    "Fish",
+    "Turtles",
+    "Icecream"
+  ]
+}
