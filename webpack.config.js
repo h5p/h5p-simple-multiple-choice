@@ -19,7 +19,7 @@ module.exports = {
           path.resolve(__dirname, "src/scripts"),
           path.resolve(__dirname, "src/entries")
         ],
-        loader: 'babel?optional=runtime'
+        loader: 'babel'
       },
       {
         test: /\.css$/,

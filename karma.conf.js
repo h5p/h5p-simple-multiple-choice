@@ -47,7 +47,7 @@ module.exports = function(config) {
               path.resolve(__dirname, "tests"),
               path.resolve(__dirname, "src/scripts")
             ],
-            loader: 'babel?optional=runtime'
+            loader: 'babel'
           }
         ]
       },
