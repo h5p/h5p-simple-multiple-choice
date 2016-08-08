@@ -1,8 +1,9 @@
-# h5p-survey
+# h5p-simple-multi-choice
 
-[![Build Status](https://travis-ci.org/h5p/h5p-survey.svg?branch=master)](https://travis-ci.org/h5p/h5p-survey)
+[![Build Status](https://travis-ci.org/h5p/h5p-simple-multiple-choice.svg?branch=master)](https://travis-ci.org/h5p/h5p-simple-multiple-choice)
 
-A H5P library for creating interactive surveys.
+A H5P library for creating simple multiple choices.
+Used as part of other content types.
 
 ## Getting started
 

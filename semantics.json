@@ -17,7 +17,8 @@
         "label": "Radiobox",
         "value": "radio"
       }
-    ]
+    ],
+    "default": "checkbox"
   },
   {
     "name": "alternatives",

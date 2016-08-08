@@ -57,8 +57,6 @@ describe('Simple Multiple Choice', () => {
         //Wait for DOM
         setTimeout(() => {
           if (changed > 0) {
-            console.log("prevState", prevState.data);
-            console.log("state", state.data);
             expect(state.data == prevState.data).toBeFalsy();
             setTimeout(() => {
               done();

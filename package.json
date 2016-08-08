@@ -35,8 +35,6 @@
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-webpack": "^1.7.0",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.14"
   }
