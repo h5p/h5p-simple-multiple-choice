@@ -7,9 +7,14 @@ Used as part of other content types.
 
 ## Getting started
 
-Grab all the modules and build the project:
+Grab all the modules:
 ```javascript
-npm start
+npm install
+```
+
+Build project:
+```javascript
+npm run build
 ```
 
 Run tests:
