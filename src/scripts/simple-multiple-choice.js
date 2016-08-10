@@ -1,3 +1,4 @@
+import xApiGenerator from './xapiGenerator';
 let instanceId = 0;
 
 export default class SimpleMultiChoice extends H5P.EventDispatcher {
@@ -26,6 +27,8 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
         checked: false
       }
     });
+
+    this.xapiGenerator = new xApiGenerator(params);
 
     /**
      * Attach library to wrapper
@@ -71,7 +74,9 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
         });
       });
 
-      this.trigger('changed', this.state);
+      let xApiTemplate = this.createXAPIEventTemplate('interacted');
+      const xApiEvent = this.xapiGenerator.generateXApi(xApiTemplate, this.state);
+      this.trigger('xAPIchanged', xApiEvent);
     };
 
     /**

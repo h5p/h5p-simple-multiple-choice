@@ -46,9 +46,9 @@ describe('Simple Multiple Choice', () => {
       let changed = 0;
       let prevState = null;
 
-      simpleMultiChoice.on('changed', (state) => {
+      simpleMultiChoice.on('xAPIchanged', (state) => {
         if (changed > 0) {
-          simpleMultiChoice.off('changed');
+          simpleMultiChoice.off('xAPIchanged');
         }
         else {
           prevState = state;
@@ -83,12 +83,12 @@ describe('Simple Multiple Choice', () => {
     });
 
     it('should trigger state change when checked', (done) => {
-      simpleCheckboxMultiChoice.on('changed', (state) => {
-        simpleCheckboxMultiChoice.off('changed');
+      simpleCheckboxMultiChoice.on('xAPIchanged', (event) => {
+        simpleCheckboxMultiChoice.off('xAPIchanged');
 
         //Wait for DOM
         setTimeout(() => {
-          expect(state).toBeDefined();
+          expect(event).toBeDefined();
           done();
         }, 100);
       });
@@ -96,14 +96,14 @@ describe('Simple Multiple Choice', () => {
     });
 
     it('should check when checked', (done) => {
-      simpleCheckboxMultiChoice.on('changed', (state) => {
-        simpleCheckboxMultiChoice.off('changed');
+      simpleCheckboxMultiChoice.on('xAPIchanged', () => {
+        simpleCheckboxMultiChoice.off('xAPIchanged');
 
         //Wait for DOM
         setTimeout(() => {
-          expect(state.data[0].checked).toBeTruthy();
-          expect(state.data[1].checked).toBeTruthy();
-          expect(state.data[2].checked).toBeFalsy();
+          expect(simpleCheckboxMultiChoice.state[0].checked).toBeTruthy();
+          expect(simpleCheckboxMultiChoice.state[1].checked).toBeTruthy();
+          expect(simpleCheckboxMultiChoice.state[2].checked).toBeFalsy();
           done();
         }, 100);
       });
@@ -111,14 +111,14 @@ describe('Simple Multiple Choice', () => {
     });
 
     it('should uncheck when unchecked', (done) => {
-      simpleCheckboxMultiChoice.on('changed', (state) => {
-        simpleCheckboxMultiChoice.off('changed');
+      simpleCheckboxMultiChoice.on('xAPIchanged', () => {
+        simpleCheckboxMultiChoice.off('xAPIchanged');
 
         //Wait for DOM
         setTimeout(() => {
-          expect(state.data[0].checked).toBeTruthy();
-          expect(state.data[1].checked).toBeFalsy();
-          expect(state.data[2].checked).toBeFalsy();
+          expect(simpleCheckboxMultiChoice.state[0].checked).toBeTruthy();
+          expect(simpleCheckboxMultiChoice.state[1].checked).toBeFalsy();
+          expect(simpleCheckboxMultiChoice.state[2].checked).toBeFalsy();
           done();
         }, 100);
       });
@@ -139,12 +139,12 @@ describe('Simple Multiple Choice', () => {
     const inputs = alternatives[2].querySelectorAll('input');
 
     it('should check when checked', (done) => {
-      simpleRadiobuttonMultiChoice.on('changed', (state) => {
-        simpleRadiobuttonMultiChoice.off('changed');
+      simpleRadiobuttonMultiChoice.on('xAPIchanged', () => {
+        simpleRadiobuttonMultiChoice.off('xAPIchanged');
 
         //Wait for DOM
         setTimeout(() => {
-          expect(state.data[0].checked).toBeTruthy();
+          expect(simpleRadiobuttonMultiChoice.state[0].checked).toBeTruthy();
           done();
         }, 100);
       });
@@ -153,19 +153,19 @@ describe('Simple Multiple Choice', () => {
 
     it('should not uncheck when checked again', () => {
       inputs[0].click();
-      // Will not fire 'changed' event.
+      // Will not fire 'xAPIchanged' event.
       expect(inputs[0].checked).toBeTruthy();
     });
 
     it('should uncheck old and check new when checking a new checkbox', (done) => {
-      simpleRadiobuttonMultiChoice.on('changed', (state) => {
-        simpleRadiobuttonMultiChoice.off('changed');
+      simpleRadiobuttonMultiChoice.on('xAPIchanged', () => {
+        simpleRadiobuttonMultiChoice.off('xAPIchanged');
 
         //Wait for DOM
         setTimeout(() => {
-          expect(state.data[0].checked).toBeFalsy();
-          expect(state.data[1].checked).toBeTruthy();
-          expect(state.data[2].checked).toBeFalsy();
+          expect(simpleRadiobuttonMultiChoice.state[0].checked).toBeFalsy();
+          expect(simpleRadiobuttonMultiChoice.state[1].checked).toBeTruthy();
+          expect(simpleRadiobuttonMultiChoice.state[2].checked).toBeFalsy();
           done();
         }, 100);
       });
