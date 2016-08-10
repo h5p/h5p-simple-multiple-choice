@@ -3,7 +3,7 @@ let instanceId = 0;
 export default class SimpleMultiChoice extends H5P.EventDispatcher {
 
   /**
-   * Constructor for survey
+   * Constructor for Simple Multiple Choice
    * @param {Object} params
    * @param {string} params.question Question text
    * @param {string} params.inputType Checkbox or radio
