@@ -5,7 +5,7 @@
   "scripts": {
     "test": "karma start",
     "testdev": "karma start --autoWatch --no-single-run",
-    "build": "webpack --progress -p",
+    "build": "webpack -d",
     "dev": "webpack -d && webpack-dev-server -d --inline --hot --open"
   },
   "keywords": [

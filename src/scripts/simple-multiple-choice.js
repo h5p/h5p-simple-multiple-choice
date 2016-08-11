@@ -76,7 +76,7 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
 
       let xApiTemplate = this.createXAPIEventTemplate('interacted');
       const xApiEvent = this.xapiGenerator.generateXApi(xApiTemplate, this.state);
-      this.trigger('xAPIchanged', xApiEvent);
+      this.trigger(xApiEvent);
     };
 
     /**

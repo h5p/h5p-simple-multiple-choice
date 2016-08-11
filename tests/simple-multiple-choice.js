@@ -46,9 +46,9 @@ describe('Simple Multiple Choice', () => {
       let changed = 0;
       let prevState = null;
 
-      simpleMultiChoice.on('xAPIchanged', (state) => {
+      simpleMultiChoice.on('xAPI', (state) => {
         if (changed > 0) {
-          simpleMultiChoice.off('xAPIchanged');
+          simpleMultiChoice.off('xAPI');
         }
         else {
           prevState = state;
@@ -83,8 +83,8 @@ describe('Simple Multiple Choice', () => {
     });
 
     it('should trigger state change when checked', (done) => {
-      simpleCheckboxMultiChoice.on('xAPIchanged', (event) => {
-        simpleCheckboxMultiChoice.off('xAPIchanged');
+      simpleCheckboxMultiChoice.on('xAPI', (event) => {
+        simpleCheckboxMultiChoice.off('xAPI');
 
         //Wait for DOM
         setTimeout(() => {
@@ -96,8 +96,8 @@ describe('Simple Multiple Choice', () => {
     });
 
     it('should check when checked', (done) => {
-      simpleCheckboxMultiChoice.on('xAPIchanged', () => {
-        simpleCheckboxMultiChoice.off('xAPIchanged');
+      simpleCheckboxMultiChoice.on('xAPI', () => {
+        simpleCheckboxMultiChoice.off('xAPI');
 
         //Wait for DOM
         setTimeout(() => {
@@ -111,8 +111,8 @@ describe('Simple Multiple Choice', () => {
     });
 
     it('should uncheck when unchecked', (done) => {
-      simpleCheckboxMultiChoice.on('xAPIchanged', () => {
-        simpleCheckboxMultiChoice.off('xAPIchanged');
+      simpleCheckboxMultiChoice.on('xAPI', () => {
+        simpleCheckboxMultiChoice.off('xAPI');
 
         //Wait for DOM
         setTimeout(() => {
@@ -139,8 +139,8 @@ describe('Simple Multiple Choice', () => {
     const inputs = alternatives[2].querySelectorAll('input');
 
     it('should check when checked', (done) => {
-      simpleRadiobuttonMultiChoice.on('xAPIchanged', () => {
-        simpleRadiobuttonMultiChoice.off('xAPIchanged');
+      simpleRadiobuttonMultiChoice.on('xAPI', () => {
+        simpleRadiobuttonMultiChoice.off('xAPI');
 
         //Wait for DOM
         setTimeout(() => {
@@ -158,8 +158,8 @@ describe('Simple Multiple Choice', () => {
     });
 
     it('should uncheck old and check new when checking a new checkbox', (done) => {
-      simpleRadiobuttonMultiChoice.on('xAPIchanged', () => {
-        simpleRadiobuttonMultiChoice.off('xAPIchanged');
+      simpleRadiobuttonMultiChoice.on('xAPI', () => {
+        simpleRadiobuttonMultiChoice.off('xAPI');
 
         //Wait for DOM
         setTimeout(() => {
