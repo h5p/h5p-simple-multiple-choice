@@ -2,11 +2,7 @@
  * Generate xAPI statements
  */
 export default class xApiGenerator {
-  constructor(params) {
-    const {
-      question,
-      alternatives
-    } = params;
+  constructor({ question, alternatives }) {
 
     const choices = alternatives.map((alt, i) => {
       return {

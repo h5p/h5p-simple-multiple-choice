@@ -9,7 +9,6 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/build'),
     filename: "[name].js",
-    sourceMapFileName: "[file].map"
   },
   module: {
     loaders: [
@@ -24,7 +23,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: path.resolve(__dirname, "src/scripts"),
-        loader: "style!css?sourceMap&modules"
+        loader: "style!css"
       },
       {
         test: /\.json$/,
@@ -33,7 +32,7 @@ module.exports = {
       }
     ]
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   devServer: {
     port: 8050,
     contentBase: "./build",
