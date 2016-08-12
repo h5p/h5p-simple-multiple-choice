@@ -31,12 +31,5 @@
       "label": "Alternative",
       "type": "text"
     }
-  },
-  {
-    "name": "requiredMessage",
-    "type": "text",
-    "label": "Required message",
-    "default": "This question requires an answer",
-    "description": "Will display if this field is unanswered and required by a wrapper content type"
   }
 ]

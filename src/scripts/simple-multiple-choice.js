@@ -1,4 +1,3 @@
-import './styles/simple-multiple-choice.css';
 import xApiGenerator from './xapiGenerator';
 let instanceId = 0;
 
@@ -9,10 +8,9 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
    * @param {string} question Question text
    * @param {string} inputType Checkbox or radio
    * @param {Array} alternatives Array of strings with answers alternatives
-   * @param {string} requiredMessage A string explaining that an answer is required
    * @param {number} contentId
    */
-  constructor({ question, alternatives, inputType, requiredMessage }, contentId = null) {
+  constructor({ question, alternatives, inputType }, contentId = null) {
     super();
 
     // Provide a unique identifier for each multi choice
@@ -44,37 +42,7 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
       const altList = this.createAlternativesList(alternatives);
       element.appendChild(altList);
 
-      this.requiredElement = this.createRequiredMessage(requiredMessage);
-      element.appendChild(this.requiredElement);
-      this.on('showRequired', () => {
-        this.requiredElement.classList.remove('hide');
-      });
-
       $wrapper.get(0).appendChild(element);
-    };
-
-    /**
-     * Create required message element
-     * @param {string} requiredText Text for required message element
-     * @return {Element}
-     */
-    this.createRequiredMessage = function(requiredText) {
-      const requiredElement = document.createElement('div');
-      const requiredMessage = document.createElement('div');
-      const exitButton = document.createElement('button');
-
-      requiredElement.classList.add('h5p-simple-multiple-choice-required', 'hide');
-
-      requiredMessage.textContent = requiredText;
-      exitButton.textContent = 'x';
-      exitButton.addEventListener('click', () => {
-        requiredElement.classList.add('hide');
-      });
-
-      requiredElement.appendChild(requiredMessage);
-      requiredElement.appendChild(exitButton);
-
-      return requiredElement;
     };
 
     /**
@@ -92,8 +60,6 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      * @param {number} inputIndex Index of input element that changed
      */
     this.handleInputChange = function(inputIndex) {
-      this.requiredElement.classList.add('hide');
-
       this.state = this.state.map((alt, j) => {
         let checked = j === inputIndex;
         if (inputType !== 'radio') {
