@@ -51,7 +51,7 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      */
     this.createQuestion = function() {
       const questionElement = document.createElement('div');
-      questionElement.textContent = question;
+      questionElement.innerHTML = question;
       return questionElement;
     };
 
