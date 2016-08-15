@@ -1,3 +1,4 @@
+import './styles/simple-multiple-choice.css';
 import xApiGenerator from './xapiGenerator';
 let instanceId = 0;
 
@@ -89,8 +90,10 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
 
         // Elements
         const listItem = document.createElement('li');
+        listItem.className = 'h5p-simple-multiple-choice-alternative-li';
         const label = document.createElement('label');
         const input = document.createElement('input');
+        input.className = 'h5p-simple-multiple-choice-alternative-input';
 
         // Input attributes
         input.type = inputType || 'checkbox';
