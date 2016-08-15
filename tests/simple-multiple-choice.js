@@ -3,7 +3,7 @@ import SimpleMultipleChoice from '../src/scripts/simple-multiple-choice';
 
 describe('Simple Multiple Choice', () => {
   const params = {
-    question: 'What do you like the most ?',
+    question: 'Don&#039;t you like Questionnaire ?',
     inputType: 'checkbox',
     alternatives: [
       'Fish',
@@ -29,10 +29,9 @@ describe('Simple Multiple Choice', () => {
       expect(surveyElement[0].parentNode).toBe($body.get(0));
     });
 
-    // Check that all survey elements are called with newRunnable
-    it('should display question', () => {
+    it('should parse question html', () => {
       const question = document.querySelector('.h5p-simple-multiple-choice-question');
-      expect(question.textContent).toBe(params.question);
+      expect(question.textContent).toBe('Don\'t you like Questionnaire ?');
     });
 
     it('should create 3 alternatives', () => {
