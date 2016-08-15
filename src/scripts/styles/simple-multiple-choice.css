@@ -38,12 +38,6 @@
   background-color: #343434;
 }
 
-.h5p-simple-multiple-choice-alternative-input:before {
-  width: 1.2em;
-  height: 1.2em;
-  background-color: blue;
-}
-
 .h5p-simple-multiple-choice-alternative-input[type='radio'] {
   border-radius: 50%;
 }
