@@ -188,4 +188,6 @@ describe('Simple Multiple Choice', () => {
       expect(radioInputs[0].name).toBe(radioInputs[1].name);
     })
   })
+
+  // TODO: Add test for reattaching content type
 });
