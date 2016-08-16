@@ -36,8 +36,11 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
     this.attach = function($wrapper) {
       const element = document.createElement('div');
       element.className = 'h5p-simple-multiple-choice';
-      const questionElement = this.createQuestion();
+      const questionElement = document.createElement('div');
       questionElement.classList.add('h5p-simple-multiple-choice-question', 'h5p-subcontent-question');
+      const questionText = this.createQuestion();
+      questionElement.appendChild(questionText);
+
       element.appendChild(questionElement);
 
       const altList = this.createAlternativesList(alternatives);
