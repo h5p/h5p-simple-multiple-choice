@@ -37,7 +37,7 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
       const element = document.createElement('div');
       element.className = 'h5p-simple-multiple-choice';
       const questionElement = this.createQuestion();
-      questionElement.className = 'h5p-simple-multiple-choice-question';
+      questionElement.classList.add('h5p-simple-multiple-choice-question', 'h5p-subcontent-question');
       element.appendChild(questionElement);
 
       const altList = this.createAlternativesList(alternatives);
@@ -85,7 +85,7 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      */
     this.createAlternativesList = function (alternatives) {
       const altList = document.createElement('ul');
-      altList.className = 'h5p-simple-multiple-choice-alternatives';
+      altList.classList.add('h5p-simple-multiple-choice-alternatives', 'h5p-subcontent-body');
       alternatives.forEach((alt, i) => {
 
         // Elements
