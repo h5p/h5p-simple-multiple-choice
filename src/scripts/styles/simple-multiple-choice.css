@@ -27,6 +27,10 @@
   cursor: pointer;
 }
 
+.h5p-simple-multiple-choice-alternative-li {
+  margin: 0.25em 0;
+}
+
 .h5p-simple-multiple-choice-alternative-input {
   -webkit-appearance: none;
   display: inline-block;
@@ -35,8 +39,8 @@
   background-color: #ebeced;
   box-shadow: inset 0 0 0 2px #fff;
   border: 1px solid #b0b4b8;
-  margin-right: 0.75em;
-  vertical-align: sub;
+  margin: 0 0.75em 0;
+  vertical-align: text-bottom;
 }
 
 .h5p-simple-multiple-choice-alternative-input:checked {
