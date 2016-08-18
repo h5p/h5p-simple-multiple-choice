@@ -1,3 +1,4 @@
+var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 var path = require('path');
 
@@ -23,7 +24,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: path.resolve(__dirname, "src/scripts"),
-        loader: "style!css"
+        loader: "style!css!postcss?sourceMap=inline"
       },
       {
         test: /\.json$/,
@@ -31,6 +32,9 @@ module.exports = {
         loader: 'json'
       }
     ]
+  },
+  postcss: function () {
+    return [autoprefixer];
   },
   devtool: 'inline-source-map',
   devServer: {

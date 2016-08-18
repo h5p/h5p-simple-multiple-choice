@@ -21,6 +21,7 @@
   margin: 0;
   padding: 1em;
   position: relative;
+  background-color: #FFF;
 }
 
 .h5p-simple-multiple-choice-alternatives label {

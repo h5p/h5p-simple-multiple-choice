@@ -6,7 +6,7 @@
     "test": "karma start",
     "testdev": "karma start --autoWatch --no-single-run",
     "build": "webpack",
-    "dev": "webpack -d && webpack-dev-server -d --inline --hot --open"
+    "dev": "webpack-dev-server -d --inline --hot --open"
   },
   "keywords": [
     "lightweight",
@@ -17,6 +17,7 @@
   "author": "thomasmars",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^6.4.0",
     "babel-cli": "^6.6.5",
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
@@ -37,6 +38,7 @@
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-webpack": "^1.7.0",
+    "postcss-loader": "^0.10.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.14"
   }
