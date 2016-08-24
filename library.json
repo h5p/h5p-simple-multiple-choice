@@ -8,7 +8,6 @@
   "author": "thomasmars",
   "license": "MIT",
   "machineName": "H5P.SimpleMultiChoice",
-  "preloadedJs": [
-    {"path": "dist/dist.js"}
-  ]
+  "preloadedJs": [{"path": "dist/dist.js"}],
+  "preloadedCss": [{"path": "dist/styles.css"}]
 }
