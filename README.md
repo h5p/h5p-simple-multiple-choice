@@ -26,38 +26,3 @@ Set up development server with test data:
 ```javascript
 npm run dev
 ```
-
-## TODO: Implement input form for alternatives and xAPI statements
-
-Semantic:
-```javascript
-  {
-    "name": "inputAlternative",
-    "type": "boolean",
-    "widget": "conditional",
-    "label": "Enable input alternative",
-    "fields": [
-      {
-        "name": "altText",
-        "type": "text",
-        "label": "Alternative text"
-      },
-      {
-        "name": "placeholderText",
-        "type": "text",
-        "label": "Placeholder text"
-      }
-    ]
-  }
-```
-
-Use editor dependency:
-```javascript
-  "editorDependencies": [
-    {
-      "machineName": "H5PEditor.Conditional",
-      "majorVersion": 1,
-      "minorVersion": 0
-    }
-  ]
-```
