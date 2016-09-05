@@ -16,12 +16,17 @@
   transform: rotate(45deg);
 }
 
+.h5p-simple-multiple-choice-alternatives-error,
 .h5p-simple-multiple-choice-alternatives {
   list-style-type: none;
   margin: 0;
   padding: 1em;
   position: relative;
   background-color: #FFF;
+}
+
+.h5p-simple-multiple-choice-alternatives-error {
+  color: darkred;
 }
 
 .h5p-simple-multiple-choice-alternatives label {

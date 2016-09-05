@@ -11,7 +11,7 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
    * @param {Array} alternatives Array of strings with answers alternatives
    * @param {number} contentId
    */
-  constructor({ question, alternatives, inputType }, contentId = null) {
+  constructor({ question, alternatives = [], inputType }, contentId = null) {
     super();
 
     // Provide a unique identifier for each multi choice
@@ -87,6 +87,13 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      * @return {HTMLElement} html for alternatives list items
      */
     this.createAlternativesList = function (alternatives) {
+      if (!alternatives.length) {
+        const err = document.createElement('div');
+        err.className = 'h5p-simple-multiple-choice-alternatives-error';
+        err.textContent = 'ERROR: No alternatives chosen';
+        return err;
+      }
+
       const altList = document.createElement('ul');
       altList.classList.add('h5p-simple-multiple-choice-alternatives', 'h5p-subcontent-body');
       alternatives.forEach((alt, i) => {
