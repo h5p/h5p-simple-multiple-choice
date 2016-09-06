@@ -9,9 +9,10 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
    * @param {string} question Question text
    * @param {string} inputType Checkbox or radio
    * @param {Array} alternatives Array of strings with answers alternatives
-   * @param {number} contentId
+   * @param {number|*} contentId
+   * @param {Object} contentData
    */
-  constructor({ question, alternatives = [], inputType }, contentId = null) {
+  constructor({ question, alternatives = [], inputType }, contentId = null, contentData = {}) {
     super();
 
     // Provide a unique identifier for each multi choice
@@ -86,8 +87,8 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      * @param {Array.<string>} alternatives Answer alternatives
      * @return {HTMLElement} html for alternatives list items
      */
-    this.createAlternativesList = function (alternatives) {
-      if (!alternatives.length) {
+    this.createAlternativesList = function () {
+      if (!this.state.length) {
         const err = document.createElement('div');
         err.className = 'h5p-simple-multiple-choice-alternatives-error';
         err.textContent = 'ERROR: No alternatives chosen';
@@ -96,7 +97,7 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
 
       const altList = document.createElement('ul');
       altList.classList.add('h5p-simple-multiple-choice-alternatives', 'h5p-subcontent-body');
-      alternatives.forEach((alt, i) => {
+      this.state.forEach(({ id, text, checked }) => {
 
         // Elements
         const listItem = document.createElement('li');
@@ -108,11 +109,15 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
         // Input attributes
         input.type = inputType || 'checkbox';
         input.name = this.uniqueName;
+        if (checked) {
+          input.setAttribute('checked', 'checked');
+        }
 
         // Label attributes
-        label.addEventListener('change', this.handleInputChange.bind(this, i));
+        label.addEventListener('change', this.handleInputChange.bind(this, id));
         label.appendChild(input);
-        label.innerHTML += alt;
+        label.innerHTML += text;
+
 
         listItem.appendChild(label);
         altList.appendChild(listItem);
@@ -120,5 +125,22 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
 
       return altList;
     };
+
+    /**
+     * Restore previous state
+     */
+    this.restorePreviousState = function () {
+      if (!contentData.previousState) {
+        return;
+      }
+
+      // Parse answer
+      const answers = contentData.previousState.split('[,]');
+      answers.forEach(value => {
+        this.state[value].checked = true;
+      })
+    };
+
+    this.restorePreviousState();
   }
 }
