@@ -127,6 +127,14 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
     };
 
     /**
+     * Get current state result pattern
+     * @return {string}
+     */
+    this.getCurrentState = function () {
+      return xApiGenerator.getResultPattern(this.state);
+    };
+
+    /**
      * Restore previous state
      */
     this.restorePreviousState = function () {

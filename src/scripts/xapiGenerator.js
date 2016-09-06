@@ -31,12 +31,7 @@ export default class xApiGenerator {
    * @return {Event} Extended xAPI event
    */
   generateXApi(xApiTemplate, state) {
-    const response = state.reduce((pattern, alt, i) => {
-      if (alt.checked) {
-        pattern += (pattern.length ? '[,]' : '') + i;
-      }
-      return pattern;
-    }, '');
+    const response = xApiGenerator.getResultPattern(state);
 
     const statement = xApiTemplate.data.statement;
     Object.assign(statement, {
@@ -51,5 +46,19 @@ export default class xApiGenerator {
     }
 
     return xApiTemplate;
+  }
+
+  /**
+   * Generate result pattern
+   * @param state
+   * @return {*}
+   */
+  static getResultPattern(state) {
+    return state.reduce((pattern, alt, i) => {
+      if (alt.checked) {
+        pattern += (pattern.length ? '[,]' : '') + i;
+      }
+      return pattern;
+    }, '');
   }
 }
