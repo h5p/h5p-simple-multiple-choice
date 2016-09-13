@@ -10,11 +10,11 @@
     "type": "select",
     "options": [
       {
-        "label": "Checkbox",
+        "label": "Multiple answers",
         "value": "checkbox"
       },
       {
-        "label": "Radiobox",
+        "label": "Single answer",
         "value": "radio"
       }
     ],
