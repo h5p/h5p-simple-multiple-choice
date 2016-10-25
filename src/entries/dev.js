@@ -14,6 +14,13 @@ const contentDataSingle = {
 
 const smc1 = new SimpleMultiChoice(paramsCheck);
 smc1.attach(H5P.jQuery('<div>').appendTo(H5P.jQuery('body')));
+paramsRadio.alternatives[1] =
+  'Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles ' +
+  'Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles ' +
+  'Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles ' +
+  'Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles ' +
+  'Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles Turtles ' +
+  'Turtles Turtles Turtles Turtles Turtles Turtles ';
 const smc2 = new SimpleMultiChoice(paramsRadio);
 smc2.attach(H5P.jQuery('<div>').appendTo(H5P.jQuery('body')));
 const smcEmpty = new SimpleMultiChoice(paramsEmpty);

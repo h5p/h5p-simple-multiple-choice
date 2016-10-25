@@ -31,6 +31,9 @@
 
 .h5p-simple-multiple-choice-alternatives label {
   cursor: pointer;
+  position: relative;
+  padding-left: 1.75em;
+  display: block;
 }
 
 .h5p-simple-multiple-choice-alternative-li {
@@ -38,23 +41,8 @@
 }
 
 .h5p-simple-multiple-choice-alternative-input {
-  -webkit-appearance: none;
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  background-color: #ebeced;
-  box-shadow: inset 0 0 0 2px #fff;
-  border: 1px solid #b0b4b8;
-  margin: 0 0.75em 0;
+  position: absolute;
+  left: 0;
+  top: 0.35em;
   vertical-align: middle;
-}
-
-.h5p-simple-multiple-choice-alternative-input:checked {
-  box-shadow: none;
-  border: 1px solid #343434;
-  background-color: #343434;
-}
-
-.h5p-simple-multiple-choice-alternative-input[type='radio'] {
-  border-radius: 50%;
 }
