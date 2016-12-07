@@ -6,11 +6,11 @@ export default class xApiGenerator {
 
     const choices = alternatives.map((alt, i) => {
       return {
-        id: i,
+        id: '' + i,
         description: {
           'en-US': alt
         }
-      }
+      };
     });
 
     // Set up default response object
