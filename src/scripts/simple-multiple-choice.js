@@ -39,12 +39,12 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
       element.className = 'h5p-simple-multiple-choice';
       const questionElement = document.createElement('div');
       questionElement.classList.add('h5p-simple-multiple-choice-question', 'h5p-subcontent-question');
-      const questionText = this.createQuestion();
+      const questionText = this.createQuestion(this.uniqueName);
       questionElement.appendChild(questionText);
 
       element.appendChild(questionElement);
 
-      const altList = this.createAlternativesList(alternatives);
+      const altList = this.createAlternativesList(this.uniqueName);
       element.appendChild(altList);
 
       $wrapper.get(0).appendChild(element);
@@ -54,8 +54,9 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      * Create html for multiple choice
      * @return {HTMLElement} html for multiple choice
      */
-    this.createQuestion = function() {
+    this.createQuestion = function(id) {
       const questionElement = document.createElement('div');
+      questionElement.id = id;
       questionElement.innerHTML = question;
       return questionElement;
     };
@@ -84,10 +85,11 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
 
     /**
      * Create alternatives for multiple choice
-     * @param {Array.<string>} alternatives Answer alternatives
+     *
+     * @param {string} questionId Unique id of question element
      * @return {HTMLElement} html for alternatives list items
      */
-    this.createAlternativesList = function () {
+    this.createAlternativesList = function (questionId) {
       if (!this.state.length) {
         const err = document.createElement('div');
         err.className = 'h5p-simple-multiple-choice-alternatives-error';
@@ -97,6 +99,9 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
 
       const altList = document.createElement('ul');
       altList.classList.add('h5p-simple-multiple-choice-alternatives', 'h5p-subcontent-body');
+      altList.setAttribute('role', 'listbox');
+      altList.setAttribute('aria-labelledby', questionId);
+
       this.state.forEach(({ id, text, checked }) => {
 
         // Elements
