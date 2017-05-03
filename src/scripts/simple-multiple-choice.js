@@ -99,7 +99,8 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
       }
 
       const altList = document.createElement('ul');
-      altList.classList.add('h5p-simple-multiple-choice-alternatives', 'h5p-subcontent-body');
+      altList.classList.add('h5p-simple-multiple-choice-alternatives');
+      altList.classList.add('h5p-subcontent-body');
       altList.setAttribute('role', 'listbox');
       altList.setAttribute('aria-labelledby', questionId);
 
