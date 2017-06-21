@@ -46,3 +46,33 @@
   top: 0.35em;
   vertical-align: middle;
 }
+
+.h5p-simple-multiple-choice-alternative-feedback {
+  position: relative;
+  font-size: 1em;
+  padding: 0.7em 2.2em;
+  margin-top: .5em;
+  margin-left: -0.4em;
+  margin-right: -0.4em;
+}
+
+.h5p-simple-multiple-choice-alternative-feedback:before {
+  content: "";
+  position: absolute;
+  left: 0.8em;
+  top: -0.25em;
+  width: 0.5em;
+  height: 0.5em;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.h5p-simple-multiple-choice-alternative-feedback.chosen,
+.h5p-simple-multiple-choice-alternative-feedback.chosen:before {
+  background: #ebf2f8;
+}
+
+.h5p-simple-multiple-choice-alternative-feedback.not-chosen,
+.h5p-simple-multiple-choice-alternative-feedback.not-chosen:before {
+  background: #faebf2;
+}

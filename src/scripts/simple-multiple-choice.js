@@ -2,6 +2,10 @@ import './styles/simple-multiple-choice.css';
 import xApiGenerator from './xapiGenerator';
 let instanceId = 0;
 
+const ALLOW_FINISH_ALWAYS = 0;
+const ALLOW_FINISH_DENY = 1;
+const ALLOW_FINISH_ALLOW = 2;
+
 export default class SimpleMultiChoice extends H5P.EventDispatcher {
 
   /**
@@ -19,14 +23,28 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
     this.uniqueName = 'h5p-simple-multiple-choice-' + instanceId;
     instanceId += 1;
 
+    // The <li> alternatives, so we can easily append feedback to them
+    this.listItems = [];
+
+    // Keeps the <div> feedback elements, so we can easily remove them
+    this.feedbackElements = [];
+
     // Keep track of the state
     this.state = alternatives.map((alt, i) => {
       return {
         id: i,
-        text: alt,
+        text: alt.text,
         checked: false
       }
     });
+
+    // Does this have feedback at all?
+    this.hasFeedback = alternatives.some(alternative => {
+      return alternative.feedback.chosenFeedback ||
+             alternative.feedback.notChosenFeedback;
+    });
+    // Have we been given the possibility to display feedback?
+    this.feedbackShown = false;
 
     this.xapiGenerator = new xApiGenerator({ question, alternatives });
 
@@ -67,6 +85,16 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      * @param {number} inputIndex Index of input element that changed
      */
     this.handleInputChange = function(inputIndex) {
+
+      // If feedback is shown, hide it:
+      if (this.feedbackShown) {
+        this.feedbackElements.forEach(element => { element.remove() });
+        this.feedbackElements = [];
+        this.feedbackShown = false;
+
+        this.trigger('allow-finish-changed');
+      }
+
       this.state = this.state.map((alt, j) => {
         let checked = j === inputIndex;
         if (inputType !== 'radio') {
@@ -125,9 +153,10 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
         label.appendChild(input);
         label.innerHTML += text;
 
-
         listItem.appendChild(label);
         altList.appendChild(listItem);
+
+        this.listItems.push(listItem);
       });
 
       return altList;
@@ -154,6 +183,52 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
       answers.forEach(value => {
         this.state[value].checked = true;
       })
+    };
+
+    /**
+     * If question alternatives have feedback, those have to be shown before
+     * user should be allowed to finish question.
+     *
+     * @return {number}
+     */
+    this.allowFinish = function () {
+      if (this.hasFeedback) {
+        return (this.hasFeedback && this.feedbackShown) ? ALLOW_FINISH_ALLOW : ALLOW_FINISH_DENY;
+      }
+
+      return ALLOW_FINISH_ALWAYS;
+    };
+
+    /**
+     * Function invoked when user is finished. MC Need this to be able to
+     * give feedback if it has any
+     *
+     * @return {boolean} true if it had any feedback to give, false otherwise
+     */
+    this.finish = function () {
+      alternatives.forEach((alt, index) => {
+        if (alt.feedback) {
+          let feedback;
+          const checked = this.state[index].checked;
+          if (checked && alt.feedback.chosenFeedback) {
+            feedback = alt.feedback.chosenFeedback;
+          }
+          else if (!checked && alt.feedback.notChosenFeedback) {
+            feedback = alt.feedback.notChosenFeedback;
+          }
+
+          if (feedback) {
+            const feedbackElement = document.createElement('div');
+            feedbackElement.className = 'h5p-simple-multiple-choice-alternative-feedback ' + (checked ? 'chosen' : 'not-chosen');
+            feedbackElement.innerHTML = feedback;
+            this.feedbackElements.push(feedbackElement);
+            this.listItems[index].appendChild(feedbackElement);
+          }
+        }
+      });
+
+      this.feedbackShown = true;
+      return (this.feedbackElements.length === 0);
     };
 
     this.restorePreviousState();

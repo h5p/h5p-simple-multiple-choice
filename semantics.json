@@ -30,10 +30,57 @@
     "entity": "Alternative",
     "min": 2,
     "field": {
+      "type": "group",
       "name": "alternative",
-      "label": "Alternative",
-      "importance": "high",
-      "type": "text"
+      "fields": [
+        {
+          "name": "text",
+          "label": "Text",
+          "importance": "high",
+          "type": "text"
+        },
+        {
+          "name": "feedback",
+          "type": "group",
+          "label": "Feedback",
+          "importance": "low",
+          "optional": true,
+          "fields": [
+            {
+              "name": "chosenFeedback",
+              "type": "text",
+              "widget": "html",
+              "label": "Message displayed if answer is selected",
+              "importance": "low",
+              "description": "Message will appear below the answer on \"continue\" if this answer is selected.",
+              "optional": true,
+              "tags": [
+                "strong",
+                "em",
+                "sub",
+                "sup",
+                "a"
+              ]
+            },
+            {
+              "name": "notChosenFeedback",
+              "type": "text",
+              "widget": "html",
+              "label": "Message displayed if answer is not selected",
+              "importance": "low",
+              "description": "Message will appear below the answer on \"continue\" if this answer is not selected.",
+              "optional": true,
+              "tags": [
+                "strong",
+                "em",
+                "sub",
+                "sup",
+                "a"
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 ]
