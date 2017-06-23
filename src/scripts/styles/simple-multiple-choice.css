@@ -32,7 +32,6 @@
 .h5p-simple-multiple-choice-alternatives label {
   cursor: pointer;
   position: relative;
-  padding-left: 1.75em;
   display: block;
 }
 
@@ -41,10 +40,8 @@
 }
 
 .h5p-simple-multiple-choice-alternative-input {
-  position: absolute;
-  left: 0;
-  top: 0.35em;
   vertical-align: middle;
+  margin: 0 3px 2px 5px;
 }
 
 .h5p-simple-multiple-choice-alternative-feedback {
@@ -59,7 +56,7 @@
 .h5p-simple-multiple-choice-alternative-feedback:before {
   content: "";
   position: absolute;
-  left: 0.8em;
+  left: 0.9em;
   top: -0.25em;
   width: 0.5em;
   height: 0.5em;

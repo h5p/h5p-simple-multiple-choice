@@ -85,10 +85,11 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      * @param {number} inputIndex Index of input element that changed
      */
     this.handleInputChange = function(inputIndex) {
-
       // If feedback is shown, hide it:
       if (this.feedbackShown) {
-        this.feedbackElements.forEach(element => { element.remove() });
+        this.feedbackElements.forEach(element => {
+          element.parentNode.removeChild(element);
+        });
         this.feedbackElements = [];
         this.feedbackShown = false;
 
