@@ -32,6 +32,7 @@
     "field": {
       "type": "group",
       "name": "alternative",
+      "label": "Alternative",
       "fields": [
         {
           "name": "text",

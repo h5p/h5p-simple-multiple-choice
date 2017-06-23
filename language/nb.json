@@ -24,6 +24,8 @@
       "englishEntity": "Alternative",
       "entity": "Alternativ",
       "field": {
+        "englishLabel": "Alternative",
+        "label": "Alternativ",
         "fields": [
           {
             "englishLabel": "Text",
