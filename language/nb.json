@@ -24,8 +24,30 @@
       "englishEntity": "Alternative",
       "entity": "Alternativ",
       "field": {
-        "englishLabel": "Alternative",
-        "label": "Alternativ"
+        "fields": [
+          {
+            "englishLabel": "Text",
+            "label": "Tekst"
+          },
+          {
+            "englishLabel": "Feedback",
+            "label": "Tilbakemelding",
+            "fields": [
+              {
+                "englishLabel": "Message displayed if answer is selected",
+                "label": "Melding som vises hvis alternativet er valgt",
+                "englishDescription": "Message will appear below the answer on \"continue\" if this answer is selected.",
+                "description": "Meldingen vises under alternativet når brukeren trykker \"Fortsett\""
+              },
+              {
+                "englishLabel": "Message displayed if answer is not selected",
+                "label": "Melding som vises hvis alternativet ikke er valgt",
+                "englishDescription": "Message will appear below the answer on \"continue\" if this answer is not selected.",
+                "description": "Meldingen vises under alternativet når brukeren trykker \"Fortsett\""
+              }
+            ]
+          }
+        ]
       }
     }
   ]
