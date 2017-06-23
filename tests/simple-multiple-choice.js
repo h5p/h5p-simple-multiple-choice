@@ -11,18 +11,21 @@ describe('Simple Multiple Choice', () => {
         feedback: {
           chosenFeedback: '',
           notChosenFeedback: ''
+        }
       },
       {
         text: 'Turtles',
         feedback: {
           chosenFeedback: '',
           notChosenFeedback: ''
+        }
       },
       {
         text: 'Icecream',
         feedback: {
           chosenFeedback: '',
           notChosenFeedback: ''
+        }
       }
     ]
   };
