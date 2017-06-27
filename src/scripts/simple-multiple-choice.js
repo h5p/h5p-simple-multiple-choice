@@ -2,11 +2,36 @@ import './styles/simple-multiple-choice.css';
 import xApiGenerator from './xapiGenerator';
 let instanceId = 0;
 
-const ALLOW_FINISH_ALWAYS = 0;
-const ALLOW_FINISH_DENY = 1;
-const ALLOW_FINISH_ALLOW = 2;
-
 export default class SimpleMultiChoice extends H5P.EventDispatcher {
+
+  /**
+   * Enum for continue/next logic. For now this is used for being able to
+   * display the feedback for simple multiple choice. I.e: can't skip to next
+   * question until this is displayed (if anything needs to be displayed)
+   *
+   * @readonly
+   * @enum {number}
+   */
+  static get AllowFinish() {
+    return {
+      /**
+       * Question type will never need to display the next button. Always ready
+       * to skip to next question
+       * @member {number}
+       */
+      ALWAYS: 0,
+      /**
+       * Question is not ready to let go yet
+       * @member {Number}
+       */
+      DENY: 1,
+      /**
+       * Question has done whatever needed, ready to let go
+       * @member {Number}
+       */
+      ALLOW: 2
+    };
+  }
 
   /**
    * Constructor for Simple Multiple Choice
@@ -194,10 +219,10 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      */
     this.allowFinish = function () {
       if (this.hasFeedback) {
-        return (this.hasFeedback && this.feedbackShown) ? ALLOW_FINISH_ALLOW : ALLOW_FINISH_DENY;
+        return (this.hasFeedback && this.feedbackShown) ? SimpleMultiChoice.AllowFinish.ALLOW : SimpleMultiChoice.AllowFinish.DENY;
       }
 
-      return ALLOW_FINISH_ALWAYS;
+      return SimpleMultiChoice.AllowFinish.ALWAYS;
     };
 
     /**
