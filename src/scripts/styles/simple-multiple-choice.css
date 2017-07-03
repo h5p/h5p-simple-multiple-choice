@@ -64,12 +64,24 @@
           transform: rotate(45deg);
 }
 
-.h5p-simple-multiple-choice-alternative-feedback.chosen,
-.h5p-simple-multiple-choice-alternative-feedback.chosen:before {
-  background: #ebf2f8;
+.h5p-simple-multiple-choice-alternative-feedback.chosen {
+  border: 1px solid #85b9e6;
+  background: #e3f2ff;
 }
 
-.h5p-simple-multiple-choice-alternative-feedback.not-chosen,
+.h5p-simple-multiple-choice-alternative-feedback.chosen:before {
+  background: #e3f2ff;
+  border-top: 1px solid #85b9e6;
+  border-left: 1px solid #85b9e6;
+}
+
+.h5p-simple-multiple-choice-alternative-feedback.not-chosen {
+  border: 1px solid #f2b8d4;
+  background: #faebf2;
+}
+
 .h5p-simple-multiple-choice-alternative-feedback.not-chosen:before {
   background: #faebf2;
+  border-top: 1px solid #f2b8d4;
+  border-left: 1px solid #f2b8d4;
 }
