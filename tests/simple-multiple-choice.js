@@ -6,9 +6,27 @@ describe('Simple Multiple Choice', () => {
     question: 'Don&#039;t you like Questionnaire ?',
     inputType: 'checkbox',
     alternatives: [
-      'Fish',
-      'Turtles',
-      'Icecream'
+      {
+        text: 'Fish',
+        feedback: {
+          chosenFeedback: '',
+          notChosenFeedback: ''
+        }
+      },
+      {
+        text: 'Turtles',
+        feedback: {
+          chosenFeedback: '',
+          notChosenFeedback: ''
+        }
+      },
+      {
+        text: 'Icecream',
+        feedback: {
+          chosenFeedback: '',
+          notChosenFeedback: ''
+        }
+      }
     ]
   };
 

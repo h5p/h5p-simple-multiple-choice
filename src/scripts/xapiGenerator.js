@@ -8,7 +8,7 @@ export default class xApiGenerator {
       return {
         id: '' + i,
         description: {
-          'en-US': alt
+          'en-US': alt.text
         }
       };
     });
