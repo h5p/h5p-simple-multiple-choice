@@ -1,0 +1,26 @@
+{
+  "semantics": [
+    {
+      "label": "Frage"
+    },
+    {
+      "label": "Multiple-Choice-Typ",
+      "options": [
+        {
+          "label": "mehrere Antworten"
+        },
+        {
+          "label": "eine Antwort"
+        }
+      ],
+      "default": "Auswahlfeld"
+    },
+    {
+      "label": "Antwortalternativen",
+      "entity": "Alternative",
+      "field": {
+        "label": "Alternative"
+      }
+    }
+  ]
+}
