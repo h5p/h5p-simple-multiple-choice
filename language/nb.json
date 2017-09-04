@@ -1,31 +1,43 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "englishLabel": "Question",
-      "label": "Spørsmål"
+      "label":"Spørsmål"
     },
     {
-      "englishLabel": "Multiple choice type",
-      "label": "Flervalgsoppgave",
-      "options": [
+      "label":"Flervalgsoppgave",
+      "options":[
         {
-          "englishLabel": "Multiple answers",
-          "label": "Flere rette svar"
+          "label":"Flere rette svar"
         },
         {
-          "englishLabel": "Single answer",
-          "label": "Ett rett svar"
+          "label":"Ett rett svar"
         }
-      ]
+      ],
+      "default":"checkbox"
     },
     {
-      "englishLabel": "Answer alternatives",
-      "label": "Svaralternativer",
-      "englishEntity": "Alternative",
-      "entity": "Alternativ",
-      "field": {
-        "englishLabel": "Alternative",
-        "label": "Alternativ"
+      "label":"Svaralternativer",
+      "entity":"Alternativ",
+      "field":{
+        "label":"Alternativ",
+        "fields":[
+          {
+            "label":"Tekst"
+          },
+          {
+            "label":"Tilbakemelding",
+            "fields":[
+              {
+                "label":"Melding som vises hvis alternativet er valgt",
+                "description":"Meldingen vises under alternativet når brukeren trykker \"Fortsett\""
+              },
+              {
+                "label":"Melding som vises hvis alternativet ikke er valgt",
+                "description":"Meldingen vises under alternativet når brukeren trykker \"Fortsett\""
+              }
+            ]
+          }
+        ]
       }
     }
   ]
