@@ -1,39 +1,39 @@
 {
   "semantics":[
     {
-      "label":"Question"
+      "label":"Kysymys"
     },
     {
-      "label":"Multiple choice type",
+      "label":"Monivalinnan muoto",
       "options":[
         {
-          "label":"Multiple answers"
+          "label":"Monta vastausta"
         },
         {
-          "label":"Single answer"
+          "label":"Yksi vastaus"
         }
       ],
       "default":"checkbox"
     },
     {
-      "label":"Answer alternatives",
-      "entity":"Alternative",
+      "label":"Vastausvaihtoehdot",
+      "entity":"vaihtoehto",
       "field":{
-        "label":"Alternative",
+        "label":"Vaihtoehto",
         "fields":[
           {
-            "label":"Text"
+            "label":"Teksti"
           },
           {
-            "label":"Feedback",
+            "label":"Palaute",
             "fields":[
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"continue\" if this answer is selected."
+                "label":"Näytettävä viesti, kun vastaus valittuna",
+                "description":"Viesti näkyy vastauksen alla, kun Jatka -painiketta on klikattu, ja tämä vastaus on valittuna."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label":"Näytettävä viesti, kun vastaus ei ole valittuna",
+                "description":"Viesti näkyy vastauksen alla, kun Jatka -painiketta on klikattu, ja tämä vastaus ei ole valittuna."
               }
             ]
           }

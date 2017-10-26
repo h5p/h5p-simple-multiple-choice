@@ -60,7 +60,7 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
         id: i,
         text: alt.text,
         checked: false
-      }
+      };
     });
 
     // Does this have feedback at all?
@@ -208,7 +208,7 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
       const answers = contentData.previousState.split('[,]');
       answers.forEach(value => {
         this.state[value].checked = true;
-      })
+      });
     };
 
     /**
