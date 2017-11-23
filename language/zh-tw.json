@@ -1,39 +1,39 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "問題"
     },
     {
-      "label": "Multiple choice type",
+      "label": "多重選擇題任務類型",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "多個答案"
         },
         {
-          "label": "Single answer"
+          "label": "單一答案"
         }
       ],
-      "default": "checkbox"
+      "default": "複選框"
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
+      "label": "選項",
+      "entity": "選擇",
       "field": {
-        "label": "Alternative",
+        "label": "選擇",
         "fields": [
           {
-            "label": "Text"
+            "label": "文字"
           },
           {
-            "label": "Feedback",
+            "label": "回饋",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "作答後顯示訊息",
+                "description": "當選擇此答案後，訊息將顯示在 \"continue\" 的下方."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "未作答時顯示訊息",
+                "description": "未作答時，訊息將顯示在 \"continue\" 的下方."
               }
             ]
           }
