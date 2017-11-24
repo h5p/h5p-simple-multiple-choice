@@ -29,11 +29,11 @@
             "fields": [
               {
                 "label": "作答後顯示訊息",
-                "description": "當選擇此答案後，訊息將顯示在 \"continue\" 的下方."
+                "description": "作答後，訊息內容將顯示在＂繼續＂功能鈕下方."
               },
               {
                 "label": "未作答時顯示訊息",
-                "description": "未作答時，訊息將顯示在 \"continue\" 的下方."
+                "description": "未作答時，訊息內容將顯示在＂繼續＂功能鈕下方."
               }
             ]
           }
