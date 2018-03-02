@@ -133,6 +133,8 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
         });
       });
 
+      this.trigger('changed');
+
       let xApiTemplate = this.createXAPIEventTemplate('interacted');
       const xApiEvent = this.xapiGenerator.generateXApi(xApiTemplate, this.state);
       this.trigger(xApiEvent);
