@@ -1,39 +1,38 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Question"
+      "label": "Question"
     },
     {
-      "label":"Question à choix multiple",
-      "options":[
+      "label": "Question ï¿½ choix multiple",
+      "options": [
         {
-          "label":"Réponses multiples"
+          "label": "Rï¿½ponses multiples"
         },
         {
-          "label":"Réponse unique"
+          "label": "Rï¿½ponse unique"
         }
-      ],
-      "default":"case à cocher"
+      ]
     },
     {
-      "label":"Réponses alternatives",
-      "entity":"Alternative",
-      "field":{
-        "label":"Alternative",
-        "fields":[
+      "label": "Rï¿½ponses alternatives",
+      "entity": "Alternative",
+      "field": {
+        "label": "Alternative",
+        "fields": [
           {
-            "label":"Texte"
+            "label": "Texte"
           },
           {
-            "label":"Feedback",
-            "fields":[
+            "label": "Feedback",
+            "fields": [
               {
-                "label":"Message si la réponse est choisie",
-                "description":"Le message apparaît au dessous du bouton \"Continuer\" si cette réponse est choisie."
+                "label": "Message si la rï¿½ponse est choisie",
+                "description": "Le message apparaï¿½t au dessous du bouton \"Continuer\" si cette rï¿½ponse est choisie."
               },
               {
-                "label":"Message si la réponse n'est pas choisie",
-                "description":"Le message apparaît au dessous du bouton \"Continuer\" si cette réponse n'est pas choisie."
+                "label": "Message si la rï¿½ponse n'est pas choisie",
+                "description": "Le message apparaï¿½t au dessous du bouton \"Continuer\" si cette rï¿½ponse n'est pas choisie."
               }
             ]
           }
