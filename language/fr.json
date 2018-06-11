@@ -4,36 +4,36 @@
       "label":"Question"
     },
     {
-      "label":"Multiple choice type",
+      "label":"Question à choix multiple",
       "options":[
         {
-          "label":"Multiple answers"
+          "label":"Réponses multiples"
         },
         {
-          "label":"Single answer"
+          "label":"Réponse unique"
         }
       ],
-      "default":"checkbox"
+      "default":"case à cocher"
     },
     {
-      "label":"Answer alternatives",
+      "label":"Réponses alternatives",
       "entity":"Alternative",
       "field":{
         "label":"Alternative",
         "fields":[
           {
-            "label":"Text"
+            "label":"Texte"
           },
           {
             "label":"Feedback",
             "fields":[
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"continue\" if this answer is selected."
+                "label":"Message si la réponse est choisie",
+                "description":"Le message apparaît au dessous du bouton \"Continuer\" si cette réponse est choisie."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label":"Message si la réponse n'est pas choisie",
+                "description":"Le message apparaît au dessous du bouton \"Continuer\" si cette réponse n'est pas choisie."
               }
             ]
           }
