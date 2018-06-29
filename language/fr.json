@@ -1,39 +1,38 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Question"
+      "label": "Question"
     },
     {
-      "label":"Multiple choice type",
-      "options":[
+      "label": "Question � choix multiple",
+      "options": [
         {
-          "label":"Multiple answers"
+          "label": "R�ponses multiples"
         },
         {
-          "label":"Single answer"
+          "label": "R�ponse unique"
         }
-      ],
-      "default":"checkbox"
+      ]
     },
     {
-      "label":"Answer alternatives",
-      "entity":"Alternative",
-      "field":{
-        "label":"Alternative",
-        "fields":[
+      "label": "R�ponses alternatives",
+      "entity": "Alternative",
+      "field": {
+        "label": "Alternative",
+        "fields": [
           {
-            "label":"Text"
+            "label": "Texte"
           },
           {
-            "label":"Feedback",
-            "fields":[
+            "label": "Feedback",
+            "fields": [
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Message si la r�ponse est choisie",
+                "description": "Le message appara�t au dessous du bouton \"Continuer\" si cette r�ponse est choisie."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Message si la r�ponse n'est pas choisie",
+                "description": "Le message appara�t au dessous du bouton \"Continuer\" si cette r�ponse n'est pas choisie."
               }
             ]
           }
