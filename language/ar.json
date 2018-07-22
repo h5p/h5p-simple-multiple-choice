@@ -1,5 +1,5 @@
 {
-  "semantics":[
+  "semantics": [
     {
       "label":"سؤال"
     },
@@ -12,8 +12,7 @@
         {
           "label":"اجابة واحدة"
         }
-      ],
-      "default":"checkbox"
+      ]
     },
     {
       "label":"الاجابات البديلة",

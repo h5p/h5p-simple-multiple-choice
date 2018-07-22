@@ -12,8 +12,7 @@
         {
           "label": "Single answer"
         }
-      ],
-      "default": "checkbox"
+      ]
     },
     {
       "label": "Answer alternatives",
