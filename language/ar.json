@@ -1,38 +1,38 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label":"سؤال"
     },
     {
-      "label": "Multiple choice type",
-      "options": [
+      "label":"نوع الاختيار المتعدد",
+      "options":[
         {
-          "label": "Multiple answers"
+          "label":"إجابات متعددة"
         },
         {
-          "label": "Single answer"
+          "label":"اجابة واحدة"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
-      "field": {
-        "label": "Alternative",
-        "fields": [
+      "label":"الاجابات البديلة",
+      "entity":"Alternative",
+      "field":{
+        "label":"بديل",
+        "fields":[
           {
-            "label": "Text"
+            "label":"نص"
           },
           {
-            "label": "Feedback",
-            "fields": [
+            "label":"رد الفعل",
+            "fields":[
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label":"الرسالة التي تعرض عندما يتم تحديد الاجابة",
+                "description":" الرسالة التي ستظهر أسفل الإجابة على زرالمتابعة إذا تم تحديد هذه الإجابة"
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label":"الرسالة التي تعرض عندمالا يتم تحديدالاجابة",
+                "description":"الرسالة التي ستظهر أسفل الإجابة على زرالمتابعة إذا لم يتم تحديد هذه الإجابة"
               }
             ]
           }
