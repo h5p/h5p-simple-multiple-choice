@@ -1,38 +1,38 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Вопрос"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Тип множественного выбора",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Несколько ответов"
         },
         {
-          "label": "Single answer"
+          "label": "Единственный ответ"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
+      "label": "Варианты ответов",
+      "entity": "Вариант",
       "field": {
-        "label": "Alternative",
+        "label": "Вариант",
         "fields": [
           {
-            "label": "Text"
+            "label": "Текст"
           },
           {
-            "label": "Feedback",
+            "label": "Обратная связь",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Сообщение отображается, если выбран ответ",
+                "description": "Сообщение будет отображаться под ответом \"продолжить\", если этот ответ выбран."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Сообщение отображается, если ответ не выбран",
+                "description": "Сообщение будет отображаться под ответом \"продолжить\", если этот ответ не выбран."
               }
             ]
           }
