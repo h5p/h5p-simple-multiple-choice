@@ -1,38 +1,38 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Küsimus"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Mitmikvaliku tüüp",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Mitu vastust"
         },
         {
-          "label": "Single answer"
+          "label": "Üks vastus"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
+      "label": "Vastuse alternatiivid",
+      "entity": "Alternatiiv",
       "field": {
-        "label": "Alternative",
+        "label": "Alternatiiv",
         "fields": [
           {
-            "label": "Text"
+            "label": "Tekst"
           },
           {
-            "label": "Feedback",
+            "label": "Tagasiside",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Teade, mida näidatakse, kui vastus on valitud",
+                "description": "Teade ilmub vastuse alla, kui vastus on valitud ja vajutatakse \"Jätka\" nuppu."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Teade, mida näidatakse, kui vastus ei ole valitud",
+                "description": "Teade ilmub vastuse alla, kui vastus ei ole valitud ja vajutatakse \"Jätka\" nuppu."
               }
             ]
           }
