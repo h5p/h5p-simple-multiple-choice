@@ -1,21 +1,21 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Frage"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Multiple Choice-Typ",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Mehrere Antworten möglich"
         },
         {
-          "label": "Single answer"
+          "label": "Eine Antwort möglich"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
+      "label": "Antwortmöglichkeiten",
       "entity": "Alternative",
       "field": {
         "label": "Alternative",
@@ -24,15 +24,15 @@
             "label": "Text"
           },
           {
-            "label": "Feedback",
+            "label": "Rückmeldungen",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Benachrichtigung, die erscheinen soll, wenn die Antwort ausgewählt wurde",
+                "description": "Diese Benachrichtigung erscheint unter der Antwort, sobald auf \"Fortsetzen\" geklickt wird und die Antwort ausgewählt wurde."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Benachrichtigung, die erscheinen soll, wenn die Antwort nicht ausgewählt wurde",
+                "description": "Benachrichtigung, die unter der Antwort erscheinen soll, sobald auf \"Fortsetzen\" geklickt wird und die Antwort nicht ausgewählt wurde."
               }
             ]
           }
