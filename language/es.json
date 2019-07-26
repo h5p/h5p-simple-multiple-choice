@@ -1,38 +1,38 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Pregunta"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Tipo opción múltiple",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Respuestas múltiples"
         },
         {
-          "label": "Single answer"
+          "label": "Respuesta única"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
+      "label": "Respuestas alternativas",
       "entity": "Alternative",
       "field": {
-        "label": "Alternative",
+        "label": "Alternativa",
         "fields": [
           {
-            "label": "Text"
+            "label": "Texto"
           },
           {
-            "label": "Feedback",
+            "label": "Retroalimentación",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Mensaje mostrado si respuesta es seleccionada",
+                "description": "Mensaje aparecerá debajo de respuesta en \"continuar\" si esta respuesta es seleccionada."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Mensaje mostrado si respuesta no es seleccionada",
+                "description": "Mensaje aparecerá debejo de respuesta en \"continuar\" si esta respuesta no es seleccionada."
               }
             ]
           }
