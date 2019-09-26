@@ -1,38 +1,38 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Soru"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Çoktan seçmeli tipi",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Birden çok cevap"
         },
         {
-          "label": "Single answer"
+          "label": "Tek cevap"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
+      "label": "Cevap alternatifleri",
+      "entity": "Alternatif",
       "field": {
-        "label": "Alternative",
+        "label": "Alternatif",
         "fields": [
           {
-            "label": "Text"
+            "label": "Metin"
           },
           {
-            "label": "Feedback",
+            "label": "Geribildirim",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Eğer cevap seçilirse mesaj gösterilir",
+                "description": "Eğer bu cevap seçilirse \"Devam et\" düğmesine basıldığında mesaj cevabın altında gösterilir."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Eğer cevap seçilmezse mesaj gösterilir",
+                "description": "Eğer bu cevap seçilmezse \"Devam et\" düğmesine basıldığında mesaj cevabın altında gösterilir."
               }
             ]
           }
