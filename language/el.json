@@ -1,38 +1,38 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Question"
+      "label":"Ερώτηση"
     },
     {
-      "label": "Multiple choice type",
-      "options": [
+      "label":"Τύπος πολλαπλής επιλογής",
+      "options":[
         {
-          "label": "Multiple answers"
+          "label":"Πολλαπλή επιλογή"
         },
         {
-          "label": "Single answer"
+          "label":"Μοναδική επιλογή"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
-      "field": {
-        "label": "Alternative",
-        "fields": [
+      "label":"Εναλλακτικές απαντήσεις",
+      "entity":"εναλλακτικης απαντησης",
+      "field":{
+        "label":"Εναλλακτική απάντηση",
+        "fields":[
           {
-            "label": "Text"
+            "label":"Κείμενο"
           },
           {
-            "label": "Feedback",
-            "fields": [
+            "label":"Ανατροφοδότηση",
+            "fields":[
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label":"Μήνυμα που εμφανίζεται εάν έχει επιλεγεί η απάντηση",
+                "description":"Το μήνυμα θα εμφανιστεί κάτω από την απάντηση πατώντας \"Συνέχεια\"."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label":"Μήνυμα που εμφανίζεται αν δεν έχει επιλεγεί η απάντηση",
+                "description":"Το μήνυμα θα εμφανιστεί κάτω από την απάντηση πατώντας \"Συνέχεια\"."
               }
             ]
           }
