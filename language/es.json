@@ -16,7 +16,7 @@
     },
     {
       "label": "Respuestas alternativas",
-      "entity": "Alternative",
+      "entity": "Alternativa",
       "field": {
         "label": "Alternativa",
         "fields": [
