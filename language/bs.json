@@ -1,38 +1,38 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Pitanje"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Višestruki izbor",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Višestruki odgovori"
         },
         {
-          "label": "Single answer"
+          "label": "Jedan odgovor"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
+      "label": "Alternativni odgovori",
+      "entity": "Alternativa",
       "field": {
-        "label": "Alternative",
+        "label": "Alternativa",
         "fields": [
           {
-            "label": "Text"
+            "label": "Tekst"
           },
           {
             "label": "Feedback",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Prikazuje se poruka ako je odgovor označen.",
+                "description": "Poruka će se pojaviti ispod odgovora na \"nastavi\" ako je odgovor označen."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Prikazuje se poruka ako odgovor nije označen",
+                "description": "Poruka će se pojaviti ispod odgovora na \"nastavi\" ako odgovor nije označen."
               }
             ]
           }

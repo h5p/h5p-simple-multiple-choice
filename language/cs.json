@@ -1,38 +1,38 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Otázka"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Typ s více možnostmi výběru",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Více odpovědí"
         },
         {
-          "label": "Single answer"
+          "label": "Jedna odpověď"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
+      "label": "Alternativy odpovědí",
+      "entity": "Alternativa",
       "field": {
-        "label": "Alternative",
+        "label": "Alternativa",
         "fields": [
           {
             "label": "Text"
           },
           {
-            "label": "Feedback",
+            "label": "Zpětná vazba",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Zpráva se zobrazí, pokud je vybrána odpověď",
+                "description": "Pokud je vybrána tato odpověď, zobrazí se pod odpovědí \"continue\" ."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Zpráva se zobrazí, pokud není vybrána odpověď",
+                "description": "Pokud není vybrána tato odpověď, zobrazí se pod odpovědí \"continue\" ."
               }
             ]
           }

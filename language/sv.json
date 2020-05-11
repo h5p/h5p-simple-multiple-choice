@@ -1,24 +1,24 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Fråga"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Flervalsfråga",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Flera rätta svar"
         },
         {
-          "label": "Single answer"
+          "label": "Ett rätt svar"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
+      "label": "Svarsalternativ",
+      "entity": "Alternativ",
       "field": {
-        "label": "Alternative",
+        "label": "Alternativ",
         "fields": [
           {
             "label": "Text"
@@ -27,12 +27,12 @@
             "label": "Feedback",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Meddelande som visas när alternativet är valt",
+                "description": "Meddelandet kommer att visas under alternativet när användaren klickar \"Fortsätt\"."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Meddelande som visas när alternativet inte är valt",
+                "description": "Meddelandet kommer att visas under alternativet när användaren klickar \"continue\" om detta svarsalternativ inte är valt."
               }
             ]
           }
