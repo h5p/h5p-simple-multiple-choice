@@ -1,38 +1,38 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Pregunta"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Tipus de selecció múltiple",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Múltiples respostes"
         },
         {
-          "label": "Single answer"
+          "label": "Resposta única"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
+      "label": "Respostes alternatives",
+      "entity": "Alternativa",
       "field": {
-        "label": "Alternative",
+        "label": "Alternativa",
         "fields": [
           {
             "label": "Text"
           },
           {
-            "label": "Feedback",
+            "label": "Retroacció",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Missatge que es mostra en seleccionar una resposta",
+                "description": "El missatge apareixerà a sota de la resposta \"continuar\" si se selecciona aquesta resposta."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Missatge que es mostra si no s’ha seleccionat cap resposta",
+                "description": "Missatge que es mostrarà a sota de la resposta, a \"Continua\", si no se selecciona la resposta."
               }
             ]
           }
