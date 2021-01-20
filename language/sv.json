@@ -32,7 +32,7 @@
               },
               {
                 "label": "Meddelande som visas när alternativet inte är valt",
-                "description": "Meddelandet kommer att visas under alternativet när användaren klickar \"continue\" om detta svarsalternativ inte är valt."
+                "description": "Meddelandet kommer att visas under alternativet när användaren klickar \"fortsätt\" om detta svarsalternativ inte är valt."
               }
             ]
           }
