@@ -4,7 +4,7 @@
       "label": "Pregunta"
     },
     {
-      "label": "Tipo opción múltiple",
+      "label": "Tipo de opción múltiple",
       "options": [
         {
           "label": "Respuestas múltiples"
@@ -32,7 +32,7 @@
               },
               {
                 "label": "Mensaje mostrado si respuesta no es seleccionada",
-                "description": "Mensaje aparecerá debejo de respuesta en \"continuar\" si esta respuesta no es seleccionada."
+                "description": "Mensaje aparecerá debajo de respuesta en \"continuar\" si esta respuesta no es seleccionada."
               }
             ]
           }
