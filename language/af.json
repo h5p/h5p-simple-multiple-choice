@@ -1,38 +1,38 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Vraag"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Meerkeuse tipe",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Verskeie antwoorde"
         },
         {
-          "label": "Single answer"
+          "label": "Enkele antwoord"
         }
       ]
     },
     {
-      "label": "Answer alternatives",
-      "entity": "Alternative",
+      "label": "Antwoord alternatiewe",
+      "entity": "Alternatiewe",
       "field": {
-        "label": "Alternative",
+        "label": "Alternatief",
         "fields": [
           {
-            "label": "Text"
+            "label": "Teks"
           },
           {
-            "label": "Feedback",
+            "label": "Terugvoer",
             "fields": [
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is selected."
+                "label": "Boodskap wat vertoon as antwoorde verkies word",
+                "description": "'n Boodskap sal onder die antwoord op \"gaan voort\" verskyn as hierdie antwoord gekies word."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"continue\" if this answer is not selected."
+                "label": "Boodskap wat vertoon word as antwoord nie gekies word nie",
+                "description": "'n Boodskap sal onder die antwoord op \"gaan voort\" verskyn as hierdie antwoord nie gekies is nie."
               }
             ]
           }
