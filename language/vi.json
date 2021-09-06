@@ -1,16 +1,16 @@
 {
   "semantics": [
     {
-      "label": "Question"
+      "label": "Câu hỏi"
     },
     {
-      "label": "Multiple choice type",
+      "label": "Loại nhiều đáp án",
       "options": [
         {
-          "label": "Multiple answers"
+          "label": "Nhiều đáp án"
         },
         {
-          "label": "Single answer"
+          "label": "Một đáp án"
         }
       ]
     },
