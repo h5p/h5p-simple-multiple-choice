@@ -15,7 +15,7 @@
       ]
     },
     {
-      "label": "Respuestas alternativas",
+      "label": "Alternativas de respuesta",
       "entity": "Alternativa",
       "field": {
         "label": "Alternativa",
@@ -28,11 +28,11 @@
             "fields": [
               {
                 "label": "Mensaje mostrado si respuesta es seleccionada",
-                "description": "Mensaje aparecerá debajo de respuesta en \"continuar\" si esta respuesta es seleccionada."
+                "description": "El mensaje aparecerá debajo de respuesta en \"continuar\" si esta respuesta es seleccionada."
               },
               {
                 "label": "Mensaje mostrado si respuesta no es seleccionada",
-                "description": "Mensaje aparecerá debajo de respuesta en \"continuar\" si esta respuesta no es seleccionada."
+                "description": "El mensaje aparecerá debajo de respuesta en \"continuar\" si esta respuesta no es seleccionada."
               }
             ]
           }
