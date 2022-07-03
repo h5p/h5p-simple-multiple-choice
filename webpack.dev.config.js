@@ -1,27 +1,43 @@
 var autoprefixer = require('autoprefixer');
-var webpack = require('webpack');
 var path = require('path');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const nodeEnv = process.env.NODE_ENV || 'development';
 
 module.exports = {
-  entry: "./src/entries/dev.js",
+  mode: nodeEnv,
+  context: path.resolve(__dirname, 'src'),
+  entry: "./entries/dev.js",
   output: {
     path: path.join(__dirname, '/build'),
     filename: "dev.js",
   },
   module: {
-    loaders: [
+    rule: [
       {
         test: /\.js$/,
         include: [
           path.resolve(__dirname, "src/scripts"),
           path.resolve(__dirname, "src/entries")
         ],
-        loader: 'babel'
+        use: 'babel-loader'
       },
       {
         test: /\.css$/,
         include: path.resolve(__dirname, "src/scripts"),
-        loader: "style!css!postcss?sourceMap=inline"
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  autoprefixer
+                ],
+              },
+            },
+          },
+        ]
       },
       {
         test: /\.json$/,
@@ -29,9 +45,6 @@ module.exports = {
         loader: 'json'
       }
     ]
-  },
-  postcss: function () {
-    return [autoprefixer];
   },
   devServer: {
     port: 8051,
