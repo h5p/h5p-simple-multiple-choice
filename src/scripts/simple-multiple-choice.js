@@ -205,8 +205,8 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      */
     this.resetTask = function () {
       this.state = this.state.map(option => ({ ...option, checked: false }));
-      this.$wrapper?.get(0)?.querySelectorAll('input[type=checkbox]').forEach(el => {
-        el.removeAttribute('checked');
+      this.$wrapper?.get(0)?.querySelectorAll('input[type=checkbox], input[type=radio]').forEach(el => {
+        el.checked = false;
       });
     };
 
