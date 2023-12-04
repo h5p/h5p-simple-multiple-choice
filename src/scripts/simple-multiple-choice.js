@@ -92,6 +92,8 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
       element.appendChild(altList);
 
       $wrapper.get(0).appendChild(element);
+
+      this.$wrapper = $wrapper;
     };
 
     /**
@@ -196,6 +198,16 @@ export default class SimpleMultiChoice extends H5P.EventDispatcher {
      */
     this.getCurrentState = function () {
       return xApiGenerator.getResultPattern(this.state);
+    };
+
+    /**
+     * Reset the task, resetting state and unchecking all checkboxes.
+     */
+    this.resetTask = function () {
+      this.state = this.state.map(option => ({ ...option, checked: false }));
+      this.$wrapper?.get(0)?.querySelectorAll('input[type=checkbox], input[type=radio]').forEach(el => {
+        el.checked = false;
+      });
     };
 
     /**
